@@ -1,0 +1,23 @@
+{
+  "name": "Weixin Key",
+  "version": "0.9",
+  "description": "Get Weixin Key and Uin",
+  "background": {
+    "scripts": [ "background.js" ]
+  },
+  "content_scripts": [ {
+      "all_frames": false,
+      "js": [ "jquery.js", "get.js" ],
+      "matches": [ "http://mp.weixin.qq.com/*", "https://wx.qq.com/*" ],
+      "run_at": "document_end"
+   } ],
+  "icons": {
+      "48": "/images/icon48.png"
+   },
+   "browser_action": {
+      "default_icon": "/images/icon48_b.png",
+      "default_title": "Get Weixin Key and Uin"
+   },
+  "manifest_version": 2,
+  "permissions": [ "tabs", "http://*/*", "https://*/*", "webRequest" ]
+}
